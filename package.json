@@ -1,0 +1,19 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "This is a backend project for generating a Django API to be linked to a frontend project",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build": "tailwindcss -i static/css/app.css -o static/css/output.css --content=\"./librarysystem/templates/**/*.html\" -v",
+    "watch": "tailwindcss -i static/css/app.css -o static/css/output.css --content=\"./librarysystem/templates/**/*.html\" --watch"
+  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
+  }
+}

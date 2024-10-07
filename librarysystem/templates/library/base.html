@@ -1,0 +1,38 @@
+<!-- base html that is inherited by other templates -->
+
+<!-- Tailwind base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}KIMC STUDIO INVENTORY{% endblock title %}</title>
+  <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+  <style>
+    body {
+      background-image: url('{% static "images/logo 2020 clear-01 (3) (2) (2) (3).png" %}');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      backdrop-filter: blur(8px);
+      min-height: 100vh;
+    }
+  </style>
+  {% block styles %}
+  {% endblock styles %}
+</head>
+<body>
+  {% block navbar %}
+    {% include 'library/navbar.html' %}
+  {% endblock navbar %}
+  {% include "library/messages.html" %}
+  <div class="container mx-auto px-4">
+    {% block content %}
+    {% endblock content %}
+  </div>
+  {% block footer %}
+  {% endblock footer %}
+  {% block scripts %} {% endblock scripts %}
+</body>
+</html>

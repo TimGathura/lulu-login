@@ -1,0 +1,6 @@
+virtual/
+.env
+VENV/
+__pycache__/
+node_modules
+my_venv2
